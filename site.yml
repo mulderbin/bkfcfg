@@ -1,0 +1,11 @@
+---
+- name: copy network device configure file to tftp server
+  hosts: all
+  connection: local
+  gather_facts: false
+
+  roles:
+    - role: ios_run_tftp
+      tags: ios_run_tftp
+  vars_files:
+    - secrets.yml

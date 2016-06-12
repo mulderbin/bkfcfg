@@ -1,0 +1,7 @@
+- name: Cisco device copy running-config to tftp server
+  ios_copy_run_tftp:
+    auth_pass: "{{ secret }}"
+    host: "{{ device_ip }}"
+    password: "{{ password }}"
+    username: "{{ username }}"
+    remote: "{{ tftp_ip }}" 
